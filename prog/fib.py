@@ -6,7 +6,6 @@ def fibonacci(n, calculation_method=0):
     """
     Функции вычисления числа фибоначчи.
     """
-
     def fibonacci_td(n):
         """
         Динамическое программирование назад.
@@ -16,7 +15,6 @@ def fibonacci(n, calculation_method=0):
         else:
             f[n] = fibonacci_td(n - 1) + fibonacci_td(n-2)
         return f[n]
-
 
     def fibonacci_bu(n):
         """
@@ -30,7 +28,6 @@ def fibonacci(n, calculation_method=0):
             f[i] = f[i - 1] + f[i - 2]
         return f[n]
 
-
     def fibonacci_bu_imroved(n):
         """
         Уменьшенным памяти.
@@ -43,7 +40,6 @@ def fibonacci(n, calculation_method=0):
         for _ in range(n - 1):
             prev, curr = curr, prev + curr
         return curr
-
 
     match calculation_method:
         case 0:
